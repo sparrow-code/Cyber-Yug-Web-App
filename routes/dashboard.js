@@ -1,7 +1,5 @@
 // Environment variables
 var app_title = process.env.TITLE;
-var port = process.env.PORT;
-var host = process.env.HOST;
 
 var express = require('express');
 var router = express.Router();
@@ -14,8 +12,6 @@ router.get('/', function (req, res) {
     if (status == "login") {
         var send_data = {
             title: req.session.userid + ' | Dashboard - ' + app_title,
-            port: port,
-            host: host,
             status: false
             /* user_id : req.session.userid */
         }
@@ -32,8 +28,6 @@ router.get('/course', function(req, res) {
     if (status == "login") {
         var send_data = {
             title: req.session.userid + ' | Course - ' + app_title,
-            port: port,
-            host: host,
             status: false
             /* user_id : req.session.userid */
         }
@@ -50,8 +44,6 @@ router.get('/category', function(req, res) {
     if (status == "login") {
         var send_data = {
             title: req.session.userid + ' | Course - ' + app_title,
-            port: port,
-            host: host,
             status: false
             /* user_id : req.session.userid */
         }
@@ -77,8 +69,6 @@ router.get('/quiz', function(req, res) {
     if (req.session.status == "login") {
         var send_data = {
             title: req.session.userid + ' | QUIZ - ' + app_title,
-            port: port,
-            host: host,
             status: false
             /* user_id : req.session.userid */
         }
@@ -93,8 +83,6 @@ router.get('/quiz/:quizid', function(req, res) {
     if (req.session.status == "login") {
         var send_data = {
             title: req.session.userid + ' | QUIZ - ' + app_title,
-            port: port,
-            host: host,
             status: false
         }
 
