@@ -313,7 +313,7 @@ app.get('*', function (req, res) {
 });
 
 // Start Server Listening on Port
-app.listen(port, host, function () {
+app.listen(port, function () {
     console.log('Server is listining on port ' + port + " and Host " + host);
     console.log(` URL http://${host}:${port}/`)
 });
