@@ -32,10 +32,11 @@ const oneDay = 1000 * 60 * 60 * 24;
 
 // Session middleware
 app.use(sessions({
-    resave: true,
+    resave: false,
     saveUninitialized: true,
     secret: "Keep it Secret",
-    cookie: { maxAge: oneDay }
+    maxAge: oneDay,
+    cookie: { secure : true }
 }));
 
 // Routes Import
