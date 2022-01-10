@@ -5,11 +5,11 @@ var mysql = require('mysql');
 var util = require('util');
 
 // DB Configuration
-var db_host = process.env.DB_HOST || 'localhost';
-var db_user = process.env.DB_USER || 'root';
-var db_password = process.env.DB_PASSWORD || '';
-var db_port = process.env.DB_PORT || '3306';
-var db_name = process.env.DB_name || 'cyberyug';
+var db_host = process.env.DB_HOST ;
+var db_user = process.env.DB_USER ;
+var db_password = process.env.DB_PASSWORD ;
+var db_port = process.env.DB_PORT ;
+var db_name = process.env.DB_NAME ;
 
 var pool = mysql.createPool({
   host: db_host,
