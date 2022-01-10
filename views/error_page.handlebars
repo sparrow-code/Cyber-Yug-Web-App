@@ -1,0 +1,93 @@
+<div class="error-img">
+    <img src="https://media.giphy.com/media/5QJd1IC6yBLumMhmtu/giphy.gif" alt="">
+</div>
+<div class="error-text">
+    <h1>Look like you're lost</h1>
+    <h2>the page you are looking for not available!</h2>
+    <a href="#" class="back-btn"> Go Back</a>
+</div>
+</div>
+
+<style>
+    * {
+        margin: 0px;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        background-color: #fff;
+    }
+
+    .error-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 100px;
+        max-width: 600px;
+        margin-bottom: 20px;
+    }
+
+    .error-text {
+        padding: 10px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .error-text h1 {
+        line-height: 1;
+        font-size: 47px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .error-text h2 {
+        line-height: 1;
+        font-size: 28px;
+        font-weight: lighter;
+        text-align: center;
+    }
+
+    .back-btn {
+        text-decoration: none;
+        background: green;
+        padding: 8px 15px;
+        color: #fff;
+        font-size: 18px;
+        letter-spacing: 1px;
+        margin-top: 20px;
+        border-radius: 5px;
+        transition: all 0.3s linear;
+    }
+
+    .back-btn:hover {
+        transform: translateY(-2px);
+    }
+
+    @media (max-width:600px) {
+        .error-text {
+            width: 90%;
+        }
+
+        .error-text h1 {
+            font-size: 36px;
+        }
+
+        .error-text h2 {
+            font-size: 20px;
+        }
+
+        .error-img img {
+            width: 90%;
+        }
+    }
+</style>
