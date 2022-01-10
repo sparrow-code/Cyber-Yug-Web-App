@@ -1,7 +1,5 @@
 // Environment variables
 // var app_title = process.env.TITLE || "Cyber Yug Foundation";
-var port = process.env.PORT;
-var host = process.env.HOST;
 
 var express = require('express');
 var router = express.Router();
@@ -12,8 +10,6 @@ router.get('/', function (req, res) {
     if (req.session.status == "login") {
         var send_data = {
             title: 'QUIZ - Dashboard - Cyber Yug Foundation',
-            port: port,
-            host: host,
             status: true,
             soDash: false
         }
@@ -21,8 +17,6 @@ router.get('/', function (req, res) {
         // If user is not Login
         var send_data = {
             title: 'QUIZ - Cyber Yug Foundation',
-            port: port,
-            host: host,
             status: true,
             soDash: true
         }
