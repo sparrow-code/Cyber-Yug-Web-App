@@ -1,0 +1,483 @@
+{{!-- Component 1
+Background Image
+--}}
+<div class="w3-white" style="position: relative; top: -87px;">
+    <img src="https://dummyimage.com/1000x443/9999/fff" class=""
+        style="width: 100%; height:443px; filter: blur(3px);" />
+</div>
+
+{{!-- Component 2
+Search Box
+--}}
+<div class="w3-container" style="position: relative; top:-174px;">
+
+    <div class="w3-red w3-center" style=" width: 25%; margin: auto; padding: 1px;">
+        <h2> Search Your Course </h2>
+    </div>
+
+    <div class="w3-red w3-center w3-padding-32" style="width: 90%; margin: auto; ">
+        <form method="GET" action="/search">
+            <div class="w3-row" style="width: 50%; margin: auto;">
+                <div class="w3-half">
+                    <input class="w3-input w3-border" style="padding: 10px; " type="text" name="search"
+                        placeholder="Search..." />
+                </div>
+                <div class="w3-half">
+                    <select style="padding: 10px;" name="cat">
+                        <option value="basicComputer"> Basic Computer </option>
+                        <option value="programming"> Programming </option>
+                        <option value="digitalMarketing"> Digital Marketing </option>
+                        <option value="hacking"> Hacking </option>
+                        <option value="webDevelopment"> Web Development </option>
+                    </select>
+                    <input type="submit" name="search" value="SEARCH" style="padding: 10px;" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+{{!-- Component 3 : Course Tab
+|-- Language Hindi And English
+|-- Course Tab
+|-- Course List
+--}}
+
+
+<div class="w3-container" style="position: relative;top: -145px;">
+    <!--
+        Component 3-I
+            Heading
+    -->
+    <div class="w3-center">
+        <h1> Some Course </h1>
+
+        <!-- Build tab here -->
+        <div class="" style="width: fit-content; margin: auto; background-color: white;">
+            <!-- button-lang
+                    onclick="loadCrouselLang('english')"
+            -->
+            <a class=" w3-button language_name w3-red" onclick="openLang(event,'hindi')"
+                style="width: 100px; color: black;">HINDI</a>
+            <a class=" w3-button language_name" onclick="openLang(event,'english')" style="color: black;">ENGLISH</a>
+        </div>
+
+
+    </div>
+
+
+    <!-- Component 3-II
+            Language Component
+                Hindi and English
+    -->
+
+    <div class="" style="margin: auto; width: fit-content; margin-top: 25px; ">
+        <div class="home_row">
+            <div class="home_column course_name tab_active" onclick="openCourse(event,'basicComputer')">
+                <span style="font-size: 20px; padding: 15px;"> Basic Computer </span>
+            </div>
+            <div class="home_column course_name" onclick="openCourse(event,'programming')">
+                <span style="font-size: 20px; padding: 15px;"> Programming </span>
+            </div>
+            <div class="home_column course_name" onclick="openCourse(event,'digitalMarketing')">
+                <span style="font-size: 20px; padding: 15px;"> Digital Marketing </span>
+            </div>
+            <div class="home_column course_name" onclick="openCourse(event, 'hacking')">
+                <span style="font-size: 20px; padding: 15px;"> Hacking </span>
+            </div>
+            <div class="home_column course_name" onclick="openCourse(event, 'webDevelopment')">
+                <span style="font-size: 20px; padding: 15px;"> Web Development </span>
+            </div>
+        </div>
+    </div>
+
+    {{!-- Component 3-III-A --}}
+
+    <div id="course_list" class="tab" style="margin-top: 15px;">
+        <div class="w3-display-container" style="width: 80%; margin: auto;">
+
+            <div class="home_row" style="margin-top: 15px;">
+                <div class="w3-card home_column column_crousel">
+                    <img class="crousel_img_border" src="./img/903744_8eb2.jpg">
+                    <h3 class="course_title"> </h3>
+                    <span class="course_lang"> </span>
+                    <div class="">
+                        <span> 4.6 </span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    &#8377;0.00
+                </div>
+
+                <div class="home_column w3-card column_crousel" style="width: 400px;">
+                    <img class="crousel_img_border" src="./img/903744_8eb2.jpg">
+                    <h3 class="course_title"> </h3>
+                    <span class="course_lang"> </span>
+                    <div class="">
+                        <span> 4.6 </span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    &#8377;0.00
+                </div>
+
+                <div class="home_column w3-card column_crousel" style="width: 400px;">
+                    <img class="crousel_img_border" src="./img/903744_8eb2.jpg">
+                    <h3 class="course_title"> </h3>
+                    <span class="course_lang"> </span>
+                    <div class="">
+                        <span> 4.6 </span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    &#8377;0.00
+                </div>
+
+                <div class="home_column w3-card column_crousel" style="width: 400px;">
+                    <img class="crousel_img_border" src="./img/903744_8eb2.jpg">
+                    <h3 class="course_title"> </h3>
+                    <span class="course_lang"> </span>
+                    <div class="">
+                        <span> 4.6 </span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    &#8377;0.00
+                </div>
+            </div>
+
+            <div class="home_row" style="margin-top: 15px;">
+                <div class="home_column w3-card column_crousel" style="width: 400px;">
+                    <img class="crousel_img_border" src="./img/903744_8eb2.jpg">
+                    <h3 class="course_title"> </h3>
+                    <span class="course_lang"> </span>
+                    <div class="">
+                        <span> 4.6 </span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    &#8377;0.00
+                </div>
+
+                <div class="home_column w3-card column_crousel" style="width: 400px;">
+                    <img class="crousel_img_border" src="./img/903744_8eb2.jpg">
+                    <h3 class="course_title"> </h3>
+                    <span class="course_lang"> </span>
+                    <div class="">
+                        <span> 4.6 </span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    &#8377;0.00
+                </div>
+
+                <div class="home_column w3-card column_crousel" style="width: 400px;">
+                    <img class="crousel_img_border" src="./img/903744_8eb2.jpg">
+                    <h3 class="course_title"> </h3>
+                    <span class="course_lang"> </span>
+                    <div class="">
+                        <span> 4.6 </span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    &#8377;0.00
+                </div>
+
+                <div class="home_column w3-card column_crousel" style="width: 400px;">
+                    <img class="crousel_img_border" src="./img/903744_8eb2.jpg">
+                    <h3 class="course_title"> </h3>
+                    <span class="course_lang"> </span>
+                    <div class="">
+                        <span> 4.6 </span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    &#8377;0.00
+                </div>
+            </div>
+
+            <div class="home_row" style="margin-top: 15px;">
+                <div class="home_column w3-card column_crousel" style="width: 400px;">
+                    <img class="crousel_img_border" src="./img/903744_8eb2.jpg">
+                    <h3 class="course_title"> </h3>
+                    <span class="course_lang"> </span>
+                    <div class="">
+                        <span> 4.6 </span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    &#8377;0.00
+                </div>
+
+                <div class="home_column w3-card column_crousel" style="width: 400px;">
+                    <img class="crousel_img_border" src="./img/903744_8eb2.jpg">
+                    <h3 class="course_title"> </h3>
+                    <span class="course_lang"> </span>
+                    <div class="">
+                        <span> 4.6 </span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    &#8377;0.00
+                </div>
+
+                <div class="home_column w3-card column_crousel" style="width: 400px;">
+                    <img class="crousel_img_border" src="./img/903744_8eb2.jpg">
+                    <h3 class="course_title"> </h3>
+                    <span class="course_lang"> </span>
+                    <div class="">
+                        <span> 4.6 </span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    &#8377;0.00
+                </div>
+
+                <div class="home_column w3-card column_crousel" style="width: 400px;">
+                    <img class="crousel_img_border" src="./img/903744_8eb2.jpg">
+                    <h3 class="course_title"> </h3>
+                    <span class="course_lang"> </span>
+                    <div class="">
+                        <span> 4.6 </span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    &#8377;0.00
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{{!-- Component 4
+Featured Course 1
+--}}
+
+<div class="w3-row" style="position: relative; top: -90px;">
+    <div class="w3-half">
+        <img src="https://dummyimage.com/650x450/9999/fff" class="w3-image" style="width: 100%; padding: 20px;">
+    </div>
+    <div class="w3-half" style="padding: 35px;">
+        <h1> This is Text Area </h1>
+
+        <p style="text-align: justify;">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus earum atque inventore ea architecto
+            facere mollitia. Dolorum porro, possimus quae doloremque, fuga veritatis, repudiandae tenetur ipsum saepe
+            incidunt ab impedit.
+        </p>
+
+        <div style="margin-top: 30px;"> 120 Student Enrolled </div>
+        <br />
+
+        <div class="w3-row" style="margin-top: 5px;">
+            <div class="w3-col m2 l2">
+                <img src="https://dummyimage.com/80x80/9999/fff" class="w3-circle">
+            </div>
+            <div class="w3-col m5 l5" style="margin-top: 25px;">
+                John Doe, Developer
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+{{!-- Component 5
+Notes
+--}}
+
+<div class="" style="position: relative; top: -115px; width: 80%; margin: auto;">
+    <div class="w3-center">
+        <h2>Some our Notes </h2>
+    </div>
+
+    <div class="w3-row-padding">
+        <div class="w3-quarter ">
+            <img src="https://dummyimage.com/249x208/9999/fff" class="w3-image" style="width: 100%;" />
+            <br>
+            <div class="">
+                <h3> This is First Note </h3>
+                <span> 0.00</span>
+            </div>
+        </div>
+        <div class="w3-quarter ">
+            <img src="https://dummyimage.com/249x208/9999/fff" class="w3-image" style="width: 100%;" />
+            <br>
+            <div class="">
+                <h3> This is First Note </h3>
+                <span> 0.00</span>
+            </div>
+        </div>
+        <div class="w3-quarter ">
+            <img src="https://dummyimage.com/249x208/9999/fff" class="w3-image" style="width: 100%;" />
+            <br>
+            <div class="">
+                <h3> This is First Note </h3>
+                <span> 0.00</span>
+            </div>
+        </div>
+        <div class="w3-quarter ">
+            <img src="https://dummyimage.com/249x208/9999/fff" class="w3-image" style="width: 100%;" />
+            <br>
+            <div class="">
+                <h3> This is First Note </h3>
+                <span> 0.00</span>
+            </div>
+        </div>
+    </div>
+    <div class="w3-row-padding">
+        <div class="w3-quarter ">
+            <img src="https://dummyimage.com/249x208/9999/fff" class="w3-image" style="width: 100%;" />
+            <br>
+            <div class="">
+                <h3> This is First Note </h3>
+                <span> 0.00</span>
+            </div>
+        </div>
+        <div class="w3-quarter ">
+            <img src="https://dummyimage.com/249x208/9999/fff" class="w3-image" style="width: 100%;" />
+            <br>
+            <div class="">
+                <h3> This is First Note </h3>
+                <span> 0.00</span>
+            </div>
+        </div>
+        <div class="w3-quarter ">
+            <img src="https://dummyimage.com/249x208/9999/fff" class="w3-image" style="width: 100%;" />
+            <br>
+            <div class="">
+                <h3> This is First Note </h3>
+                <span> 0.00</span>
+            </div>
+        </div>
+        <div class="w3-quarter ">
+            <img src="https://dummyimage.com/249x208/9999/fff" class="w3-image" style="width: 100%;" />
+            <br>
+            <div class="">
+                <h3> This is First Note </h3>
+                <span> 0.00</span>
+            </div>
+        </div>
+    </div>
+    <div class="w3-row-padding">
+        <div class="w3-quarter ">
+            <img src="https://dummyimage.com/249x208/9999/fff" class="w3-image" style="width: 100%;" />
+            <br>
+            <div class="">
+                <h3> This is First Note </h3>
+                <span> 0.00</span>
+            </div>
+        </div>
+        <div class="w3-quarter ">
+            <img src="https://dummyimage.com/249x208/9999/fff" class="w3-image" style="width: 100%;" />
+            <br>
+            <div class="">
+                <h3> This is First Note </h3>
+                <span> 0.00</span>
+            </div>
+        </div>
+        <div class="w3-quarter ">
+            <img src="https://dummyimage.com/249x208/9999/fff" class="w3-image" style="width: 100%;" />
+            <br>
+            <div class="">
+                <h3> This is First Note </h3>
+                <span> 0.00</span>
+            </div>
+        </div>
+        <div class="w3-quarter ">
+            <img src="https://dummyimage.com/249x208/9999/fff" class="w3-image" style="width: 100%;" />
+            <br>
+            <div class="">
+                <h3> This is First Note </h3>
+                <span> 0.00</span>
+            </div>
+        </div>
+    </div>
+    <div class="w3-row-padding">
+        <div class="w3-quarter ">
+            <img src="https://dummyimage.com/249x208/9999/fff" class="w3-image" style="width: 100%;" />
+            <br>
+            <div class="">
+                <h3> This is First Note </h3>
+                <span> 0.00</span>
+            </div>
+        </div>
+        <div class="w3-quarter ">
+            <img src="https://dummyimage.com/249x208/9999/fff" class="w3-image" style="width: 100%;" />
+            <br>
+            <div class="">
+                <h3> This is First Note </h3>
+                <span> 0.00</span>
+            </div>
+        </div>
+        <div class="w3-quarter ">
+            <img src="https://dummyimage.com/249x208/9999/fff" class="w3-image" style="width: 100%;" />
+            <br>
+            <div class="">
+                <h3> This is First Note </h3>
+                <span> 0.00</span>
+            </div>
+        </div>
+        <div class="w3-quarter ">
+            <img src="https://dummyimage.com/249x208/9999/fff" class="w3-image" style="width: 100%;" />
+            <br>
+            <div class="">
+                <h3> This is First Note </h3>
+                <span> 0.00</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{!-- Component 6
+Join Our Community
+--}}
+<div class="w3-center" style="position: relative; top: -75px;">
+    <h2> Join Our Community Now! </h2>
+    <div> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero natus ut optio minima illum ex accusamus
+        consequuntur incidunt laudantium magnam adipisci, repellendus commodi architecto porro dolorum, saepe numquam,
+        delectus vel! </div>
+    <br />
+    <a href="/register" class="w3-red"
+        style="text-decoration: none; user-select: none; padding: 5px; margin-top: 15px;"> Register Now </a>
+</div>
+
+<!-- Course Page JS When user Is Logout-->
+<script src="http://{{{data.host}}}:{{{data.port}}}/js/home.js"></script>

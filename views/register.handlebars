@@ -1,0 +1,59 @@
+<style>
+    .color {
+        color: black;
+    }
+</style>
+
+<div class="flex-r" style="margin-top: 15px; margin-bottom: 15px;">
+    <section id="login" class="flex-r">
+
+        <!-- left -->
+
+
+        <div class="l-login flex-c">
+            <div class="login-img">
+                <img src="./img/login/login-header-img.png" alt="">
+            </div>
+        </div>
+
+
+        <!-- right -->
+
+
+        <div class="wrapper">
+
+            <!-- register  -->
+
+
+            <form id="register-wrapper" class="flex-c" method="POST" action="/register">
+                <div class="input-box flex-c">
+                    <div class="color">Name </div>
+                    <input type="text" name="name" placeholder="Enter your Name">
+                </div>
+                <div class="input-box flex-c">
+                    <div class="color">User Name </div>
+                    <input type="text" name="usr_name" placeholder="Enter User Name">
+                </div>
+                <div class="input-box flex-c">
+                    <div class="color">Email-ID</div>
+                    <input type="email" name="E_mail_ID" placeholder="Enter your E-Mail ID">
+                </div>
+                <div class="input-box flex-c">
+                    <div class="color">Mobile Number </div>
+                    <input type="text" name="mobile_number" placeholder="Enter your Mobile Number">
+                </div>
+                <div class="input-box flex-c">
+                    <div class="color">Password</div>
+                    <input type="password" name="password" placeholder="Enter password">
+                </div>
+                <input type="submit" id="register-btn" class="submit-btn" name="submit" value="REGISTER" />
+
+                <div class="last-line">
+                    <a href="http://{{{data.host}}}:{{{data.port}}}/login" style="color: red;">you have a account ?</a>
+                </div>
+            </form>
+
+        </div>
+
+    </section>
+</div>

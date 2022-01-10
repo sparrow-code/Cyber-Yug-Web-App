@@ -1,0 +1,63 @@
+<style>
+    .color {
+        color: black;
+    }
+</style>
+
+<div class="w3-container" style="margin-top: 15px; margin-bottom: 15px;">
+    <div class="flex-r">
+        <section id="login" class="flex-r">
+
+            <!-- left -->
+
+
+            <div class="l-login flex-c">
+                <div class="login-img">
+                    <img src="/img/login/login-header-img.png" alt="">
+                </div>
+            </div>
+
+
+            <!-- right -->
+
+
+            <div class="wrapper">
+
+                <!-- login  -->
+
+
+                <form id="login-wrapper" class="flex-c" method="post" action="/login">
+                    <div class="input-box flex-c">
+                        <div class="color"> User Name or Email Address </div>
+                        <input type="text" name="usr_id" placeholder="Enter User Name or Mail ID">
+                    </div>
+                    <div class="input-box flex-c">
+                        <div class="color"> Password</div>
+                        <input type="password" name="password" placeholder="Enter password">
+                    </div>
+                    <div class=" check-item flex-r">
+                        <span class="flex-r">
+                            <input type="checkbox"> &nbsp; <span class="color"> Remember me </span>
+                        </span>
+                        <a class="color" href="http://{{{data.host}}}:{{{data.port}}}/forget">Forgot Password ?</a>
+                    </div>
+
+                    {{#if data.redirect }}
+                        <input type="hidden" name="type" value="{{{data.type}}}" />
+                        <input type="hidden" name="id" value="{{{data.id}}}" />
+                    {{else}}
+
+                    {{/if}}
+
+                    <input id="login-btn" class="submit-btn" type="submit" name="submit" value="LOGIN">
+
+                    <div class="last-line">
+                        <a href="http://{{{data.host}}}:{{{data.port}}}/register" style="color: red;">Don't have a account ?</a>
+                    </div>
+                </form>
+
+            </div>
+
+        </section>
+    </div>
+</div>
