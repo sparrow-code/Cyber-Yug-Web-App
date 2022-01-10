@@ -1,8 +1,7 @@
-require('dotenv').config()
+// require('dotenv').config()
 // Environment variables
 var app_title = process.env.TITLE;
 var port = process.env.PORT;
-var host = process.env.HOST;
 
 // Import Require Module
 var pool = require('./db_con.js');
@@ -36,7 +35,7 @@ app.use(sessions({
     saveUninitialized: true,
     secret: "Keep it Secret",
     maxAge: oneDay,
-    cookie: { secure : true }
+    cookie: { secure: true }
 }));
 
 // Routes Import
@@ -59,16 +58,12 @@ app.get('/', function (req, res) {
     if (req.session.status == "login") {
         var send_data = {
             title: app_title,
-            port: port,
-            host: host,
             status: true,
             soDash: false
         }
     } else {
         var send_data = {
             title: app_title,
-            port: port,
-            host: host,
             status: true,
             soDash: true
         }
@@ -80,16 +75,12 @@ app.get('/course', function (req, res) {
     if (req.session.status == "login") {
         var send_data = {
             title: 'Course - Cyber Yug Foundation',
-            port: port,
-            host: host,
             status: true,
             soDash: false
         }
     } else {
         var send_data = {
             title: 'Course - Cyber Yug Foundation',
-            port: port,
-            host: host,
             status: true,
             soDash: true
         }
@@ -104,16 +95,12 @@ app.get('/ctf', (req, res) => {
 
         var send_data = {
             title: 'CTF - Cyber Yug Foundation',
-            port: port,
-            host: host,
             status: true,
             soDash: false
         }
     } else {
         var send_data = {
             title: 'CTF - Cyber Yug Foundation',
-            port: port,
-            host: host,
             status: true,
             soDash: true
         }
@@ -126,16 +113,12 @@ app.get('/franchise', function (req, res) {
     if (req.session.status == "login") {
         var send_data = {
             title: 'Franchise - Cyber Yug Foundation',
-            port: port,
-            host: host,
             status: true,
             soDash: false
         }
     } else {
         var send_data = {
             title: 'Franchise - Cyber Yug Foundation',
-            port: port,
-            host: host,
             status: true,
             soDash: true
         }
@@ -148,16 +131,11 @@ app.get('/certificate', function (req, res) {
     if (req.session.status == "login") {
         var send_data = {
             title: 'Certificate - Cyber Yug Foundation',
-            port: port,
-            host: host,
             status: true,
             soDash: false
         }
     } else {
         var send_data = {
-            title: 'Certificate - Cyber Yug Foundation',
-            port: port,
-            host: host,
             status: true,
             soDash: true
         }
@@ -173,8 +151,6 @@ app.get('/login', function (req, res) {
     } else {
         var send_data = {
             title: 'Login - ' + app_title,
-            port: port,
-            host: host,
             status: true,
             redirect: false,
             soDash: true
@@ -193,8 +169,6 @@ app.get('/login/:type/:id', function (req, res) {
 
         var send_data = {
             title: 'Login - ' + app_title,
-            port: port,
-            host: host,
             status: true,
             redirect: true,
             soDash: true,
@@ -248,17 +222,13 @@ app.post('/login', function (req, res) {
                     res.redirect('/verify');
                 } else {
                     var send_data = {
-                        title: 'Unknown Error - Cyber Yug Foundation',
-                        port: port,
-                        host: host
+                        title: 'Unknown Error - Cyber Yug Foundation'
                     }
                     res.render('error_page', { data: send_data });
                 }
             } else {
                 var send_data = {
-                    title: 'Unknown Error - Cyber Yug Foundation',
-                    port: port,
-                    host: host
+                    title: 'Unknown Error - Cyber Yug Foundation'
                 }
                 res.render('error_page', { data: send_data });
             }
@@ -269,9 +239,7 @@ app.post('/login', function (req, res) {
 
 app.get('/forget', function (req, res) {
     var send_data = {
-        title: 'Forget - Cyber Yug Foundation',
-        port: port,
-        host: host
+        title: 'Forget - Cyber Yug Foundation'
     }
 
     res.render('forget', { data: send_data });
@@ -279,9 +247,7 @@ app.get('/forget', function (req, res) {
 
 app.get('/verify', function (req, res) {
     var send_data = {
-        title: 'Forget - Cyber Yug Foundation',
-        port: port,
-        host: host
+        title: 'Forget - Cyber Yug Foundation'
     };
     res.render('verify', { data: send_data });
 });
@@ -295,16 +261,12 @@ app.get('*', function (req, res) {
     if (req.session.status == "login") {
         var send_data = {
             title: '404 Error Page - Cyber Yug Foundation',
-            port: port,
-            host: host,
             status: true,
             soDash: false
         }
     } else {
         var send_data = {
             title: '404 Error Page - Cyber Yug Foundation',
-            port: port,
-            host: host,
             status: true,
             soDash: true
         }
@@ -313,7 +275,4 @@ app.get('*', function (req, res) {
 });
 
 // Start Server Listening on Port
-app.listen(port, function () {
-    console.log('Server is listining on port ' + port + " and Host " + host);
-    console.log(` URL http://${host}:${port}/`)
-});
+app.listen(port, function () { });
