@@ -1,7 +1,5 @@
 // Environment variables
 var app_title = process.env.TITLE || "Cyber Yug Foundation";
-var port = process.env.PORT || 3000;
-var host = process.env.HOST || '127.0.0.1';
 
 var express = require('express');
 var router = express.Router();
@@ -28,8 +26,6 @@ router.get('/', function (req, res) {
     } else {
         var send_data = {
             title: 'Registration - ' + app_title,
-            port: port,
-            host: host,
             status: true,
             soDash : true
         }
