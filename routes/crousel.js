@@ -1,8 +1,6 @@
 /* Home Crousel JS */
 require('dotenv').config()
 // Environment variables
-var port = process.env.PORT;
-var host = process.env.HOST;
 
 var express = require('express');
 var router = express.Router();
