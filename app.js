@@ -10,7 +10,7 @@ var express = require('express');
 var path = require('path');
 const bodyParser = require('body-parser');
 const cookieParser = require("cookie-parser");
-const sessions = require('express-session');
+const sessions = require('cookie-session');
 
 const app = express();
 
