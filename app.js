@@ -1,6 +1,6 @@
 require('dotenv').config()
 // Environment variables
-var app_title = "Cyber Yug Foundation";
+var app_title = process.env.TITLE;
 var port = process.env.PORT;
 var host = process.env.HOST;
 
