@@ -253,7 +253,7 @@ app.get('/verify', function (req, res) {
 });
 
 app.get('/logout', (req, res) => {
-    req.session.destroy();
+    req.session = null;
     res.redirect('/');
 });
 
